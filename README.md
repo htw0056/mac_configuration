@@ -25,5 +25,5 @@ cd configuration
 
 ## KarabinerConfiguration
 
-提供了Karabiner配置文件：`caps_lock.json`适用于MAC系统10.11及以下，`private.xml`适用于MAC系统10.12以上
+提供了Karabiner配置文件：`private.xml`适用于MAC系统10.11及以下，`caps_lock.json`适用于MAC系统10.12以上
 
