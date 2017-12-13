@@ -30,9 +30,9 @@
 - 安装改键软件(系统10.11及以下)：[Seil](https://pqrs.org/osx/karabiner/seil.html.en)与[Karabiner](https://pqrs.org/osx/karabiner/)
   - 在“系统设置-键盘-修饰键”中将Capslock设置为“无操作”
   - 使用Seil将CapsLock的Keycode改为80
-  - 替换Karabiner的[配置文件](https://github.com/htw0056/blog/blob/master/mac_config/private.xml)`private.xml`
+  - 替换Karabiner的[配置文件](https://github.com/htw0056/mac_configuration/blob/master/KarabinerConfiguration/private.xml)`private.xml`
 - 安装改键软件(系统10.12以上)：[Karabiner-Elements](https://pqrs.org/osx/karabiner/)
-  - 下载[caps_locl.json](https://github.com/htw0056/blog/blob/master/mac_config/caps_locl.json)
+  - 下载[caps_locl.json](https://github.com/htw0056/mac_configuration/blob/master/KarabinerConfiguration/caps_lock.json)
   - ` cp caps_lock.json .config/karabiner/assets/complex_modifications/caps_lock.json`
   - 如果有外接键盘，在Karabiner-Elements内设置外接键盘alt和command互换（目前Karabiner-Elements会覆盖系统默认配置）
 - 安装窗口管理软件：[Moom](https://manytricks.com/moom/)
@@ -46,17 +46,17 @@
 
 ## 应用
 
-* 编辑器：[VSCode](https://code.visualstudio.com)，[Typora](https://www.typora.io),[Sublime](https://www.sublimetext.com/)
+* 编辑器：[VSCode](https://code.visualstudio.com)，[Typora](https://www.typora.io), [Sublime](https://www.sublimetext.com/)
 * IM软件：[钉钉](https://www.dingtalk.com)
-* 浏览器:[Google Chrome](http://www.google.cn/intl/zh-CN/chrome/browser/desktop/index.html)
-* 解压软件:[Keka](http://www.kekaosx.com/en/)
+* 浏览器：[Google Chrome](http://www.google.cn/intl/zh-CN/chrome/browser/desktop/index.html)
+* 解压软件：[Keka](http://www.kekaosx.com/en/)
 
 
 
 
 ## 开发环境
 
-* IDE：[IntelliJ IDEA Ultimate](http://www.jetbrains.com/idea/),[PyCharm](https://www.jetbrains.com/pycharm/download/#section=mac),[eclipse](http://www.eclipse.org/downloads/eclipse-packages/)
+* IDE：[IntelliJ IDEA Ultimate](http://www.jetbrains.com/idea/), [PyCharm](https://www.jetbrains.com/pycharm/download/#section=mac), [eclipse](http://www.eclipse.org/downloads/eclipse-packages/)
 
 * Anaconda安装至`~/anaconda`
 
@@ -70,7 +70,7 @@
 
 * Vim安装与配置：`brew install vim`
 
-* 启用[Configuration](https://github.com/htw0056/blog/tree/master/mac_config/configuration),配置个性化SHELL环境
+* 启用[Configuration](https://github.com/htw0056/mac_configuration/tree/master/configuration),配置个性化SHELL环境
 
   ```bash
   cd configuration

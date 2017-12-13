@@ -16,6 +16,13 @@
 
 修改自[Configuration](https://github.com/Vonng/Configuration)
 
+```
+cd configuration
+./setup
+```
+
+
+
 ## KarabinerConfiguration
 
 提供了Karabiner配置文件：`caps_lock.json`适用于MAC系统10.11及以下，`private.xml`适用于MAC系统10.12以上
