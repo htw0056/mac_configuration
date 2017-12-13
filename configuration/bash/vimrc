@@ -1,0 +1,9 @@
+set encoding=utf-8
+set fileencodings=ucs-bom,utf-8,utf-16,gbk,big5,gb18030,latin1
+set fileencoding=utf-8
+syntax on
+set shiftwidth=4
+set tabstop=4
+set hlsearch
+set showmatch
+set nu

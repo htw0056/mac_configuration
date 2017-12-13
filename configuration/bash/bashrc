@@ -1,0 +1,26 @@
+#!/usr/bash
+#=============================================================================#
+# 	htw0056's .bashrc
+#   Author: htw0056 (huangtw1995@outlook.com)
+#   for non-login and interactive shell
+#=============================================================================#
+
+
+#=============================================================================#
+# Load bash_inc extensions
+#—————————————————————————————————————————————————————————————————————————————#
+# * ~/.bash_inc/util for useful alias & functions
+# * ~/.bash_inc/private for private settings.
+#—————————————————————————————————————————————————————————————————————————————#
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+        . /etc/bashrc
+fi
+
+# User specific aliases and functions
+for file in ~/.bash_inc/{util,private,prompt}; do
+    [ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
+unset file;
+#=============================================================================#
+

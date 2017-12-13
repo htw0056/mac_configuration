@@ -1,0 +1,204 @@
+#!/usr/bash
+#=============================================================================#
+#   htw0056's bash environment
+#   Author: htw0056 (huangtw1995@outlook.com)
+#=============================================================================#
+
+# History
+export HISTSIZE=32768;
+export HISTFILESIZE=$HISTSIZE;
+export HISTCONTROL=ignoredups;
+export HISTIGNORE="l:ls:cd:cd -:pwd:exit:date:* --help";    # Hide tedious cmd
+#—————————————————————————————————————————————————————————————————————————————#
+# Editor
+export EDITOR="vim";
+#—————————————————————————————————————————————————————————————————————————————#
+# Locale
+#export LANG="zh_CN.UTF-8";
+#export LC_ALL="en_US.UTF-8";
+#—————————————————————————————————————————————————————————————————————————————#
+# Man
+export LESS_TERMCAP_md="${yellow}";     #Highlight man page title
+export MANPAGER="less -X";
+#=============================================================================#
+
+
+#=============================================================================#
+# Bash Opt                                                                    #
+#—————————————————————————————————————————————————————————————————————————————#
+shopt -s nocaseglob;    # case-insensitive globbing
+shopt -s histappend;    # append rather than overwrite in bash history
+shopt -s cdspell;       # auto-correct typos in cd
+for option in autocd globstar; do
+    shopt -s "$option" 2> /dev/null;
+done;                   # Bash 4 features
+#=============================================================================#
+
+
+
+#—————————————————————————————————————————————————————————————————————————————#
+# SSH hostname from `~/.ssh/config`
+[ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2 | tr ' ' '\n')" scp sftp ssh;
+#—————————————————————————————————————————————————————————————————————————————#
+
+
+#=============================================================================#
+# ENV                                                                         #
+#—————————————————————————————————————————————————————————————————————————————#
+ENV="dev"
+if [ "$(uname)" == "Linux" ]; then
+    ENV="prod"
+fi
+
+export ENV
+#—————————————————————————————————————————————————————————————————————————————#
+
+#=============================================================================#
+# path begin                                                                  #
+#—————————————————————————————————————————————————————————————————————————————#
+
+#=============================================================================#
+# usr                                                                         #
+#—————————————————————————————————————————————————————————————————————————————#
+MY_USR="${HOME}/usr"
+MY_BIN="${MY_USR}/bin"
+#—————————————————————————————————————————————————————————————————————————————#
+if [ -d "${MY_BIN}" ]; then
+    export MY_BIN
+    PATH="${MY_BIN}:${PATH}"
+else
+    unset MY_BIN
+fi
+#=============================================================================#
+
+
+#=============================================================================#
+# python                                                                      #
+#—————————————————————————————————————————————————————————————————————————————#
+# user's anaconda will overwrite system's
+if [ -d "/usr/local/anaconda2" ]; then
+    export PYTHONHOME="/usr/local/anaconda2";
+    PATH="${PYTHONHOME}/bin:${PATH}"
+fi
+
+if [ -d "${HOME}/anaconda2" ]; then
+    export PYTHONHOME="${HOME}/anaconda2";
+    PATH="${PYTHONHOME}/bin:${PATH}"
+
+fi
+
+# Optional lib/include path
+if [ $PYTHONHOME ]; then
+    C_INCLUDE_PATH="${PYTHONHOME}/include/:$LD_LIBRARY_PATH"
+    LIBRARY_PATH="${PYTHONHOME}/lib/:$LD_LIBRARY_PATH"
+    LD_LIBRARY_PATH="${PYTHONHOME}/lib/:$LD_LIBRARY_PATH"
+fi
+
+#=============================================================================#
+
+
+#=============================================================================#
+# java                                                                        #
+#—————————————————————————————————————————————————————————————————————————————#
+JAVA_HOME="/usr/local/java"
+if [ "$(uname)" == "Darwin" ]; then
+    JAVA_HOME=`/usr/libexec/java_home`
+fi
+
+if [ -d "${JAVA_HOME}" ]; then
+    export JAVA_HOME
+    export CLASSPATH=".:${JAVA_HOME}/lib/dt.jar:${JAVA_HOME}/lib/tools.jar"
+    PATH="$PATH:${JAVA_HOME}/bin"
+else
+    unset JAVA_HOME
+fi
+#=============================================================================#
+
+#=============================================================================#
+# maven                                                                       #
+#—————————————————————————————————————————————————————————————————————————————#
+if [ -d "/usr/local/maven" ]; then
+    export M2_HOME="/usr/local/maven"
+    PATH="$PATH:${M2_HOME}/bin"
+fi
+#=============================================================================#
+
+
+#=============================================================================#
+# go                                                                          #
+#—————————————————————————————————————————————————————————————————————————————#
+if [ -d "/usr/local/go" ]; then
+    export GOROOT="/usr/local/go"
+    PATH="${GOROOT}/bin:${PATH}"
+fi
+
+if [ -d "${HOME}/go" ]; then
+    export GOPATH="${HOME}/go"
+    PATH="${GOPATH}/bin:${PATH}"
+fi
+
+if [ -d "${HOME}/Dev/go" ]; then
+    export GOPATH="${HOME}/Dev/go"
+    PATH="${GOPATH}/bin:${PATH}"
+fi
+#=============================================================================#
+
+
+#=============================================================================#
+# node                                                                        #
+#—————————————————————————————————————————————————————————————————————————————#
+if [ -d "/usr/local/node" ]; then
+    export NODE_HOME="/usr/local/node"
+    PATH="$PATH:${NODE_HOME}/bin"
+fi
+#=============================================================================#
+
+
+#=============================================================================#
+# nginx                                                                       #
+#—————————————————————————————————————————————————————————————————————————————#
+if [ -d "/usr/local/nginx" ]; then
+    export NGINX_HOME="/usr/local/nginx"
+    PATH="$PATH:${NGINX_HOME}/bin"
+fi
+#=============================================================================#
+
+
+#=============================================================================#
+# postgres                                                                    #
+#—————————————————————————————————————————————————————————————————————————————#
+# PostgreSQL
+
+if [ -d "/usr/local/pgsql" ]; then
+    export PG_HOME="/usr/local/pgsql"
+    PATH="$PATH:${PG_HOME}/bin"
+fi
+
+if [ -d "/var/lib/pgsql/data" ]; then
+    export PGDATA="/var/lib/pgsql/data"
+elif [ -d "/usr/local/pgsql/data" ]; then
+    export PGDATA="/usr/local/pgsql/data"
+fi    
+
+
+# Optional lib/include path
+if [ $PG_HOME ]; then
+    C_INCLUDE_PATH="${PG_HOME}/include/:$LD_LIBRARY_PATH"
+    LIBRARY_PATH="${PG_HOME}/lib/:$LD_LIBRARY_PATH"
+    LD_LIBRARY_PATH="${PG_HOME}/lib/:$LD_LIBRARY_PATH"
+fi
+#=============================================================================#
+
+if [ -d "${HOME}/usr/local/odpscmd" ]; then
+    export PATH=~/usr/local/odpscmd/bin:$PATH
+fi
+
+
+#=============================================================================#
+# path end                                                                    #
+#—————————————————————————————————————————————————————————————————————————————#
+export PATH
+# export C_INCLUDE_PATH
+# export LIBRARY_PATH
+# export LD_LIBRARY_PATH
+#=============================================================================#
