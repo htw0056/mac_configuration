@@ -190,7 +190,7 @@ fi
 #=============================================================================#
 
 if [ -d "${HOME}/usr/local/odpscmd" ]; then
-    export PATH=~/usr/local/odpscmd/bin:$PATH
+    PATH="${HOME}/usr/local/odpscmd/bin:$PATH"
 fi
 
 
@@ -198,7 +198,7 @@ fi
 # path end                                                                    #
 #—————————————————————————————————————————————————————————————————————————————#
 export PATH
-# export C_INCLUDE_PATH
-# export LIBRARY_PATH
-# export LD_LIBRARY_PATH
+export C_INCLUDE_PATH
+export LIBRARY_PATH
+export LD_LIBRARY_PATH
 #=============================================================================#

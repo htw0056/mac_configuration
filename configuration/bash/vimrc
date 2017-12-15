@@ -7,3 +7,18 @@ set tabstop=4
 set hlsearch
 set showmatch
 set nu
+"autocmd创建新文件自动调用setfilehead()函数
+autocmd BufNewFile *.sh exec ":call Setfilehead()"
+func Setfilehead()
+	call append(0, '#!/bin/bash')
+    call append(1, '#***********************************************')
+    call append(2, '#')
+    call append(3, '#      Filename: '.expand("%"))
+    call append(4, '#        Author: htw')
+	call append(5, '#		   Mail: huangtw1995@outlook.com')
+    call append(6, '#        Create: '.strftime("%Y-%m-%d %H:%M:%S"))
+    call append(7, '#   Description: ---')
+    call append(8, '#')
+    call append(9, '#***********************************************')
+    call append(10, '')
+endfunc
