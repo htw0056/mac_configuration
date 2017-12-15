@@ -77,21 +77,21 @@ fi
 #—————————————————————————————————————————————————————————————————————————————#
 # user's anaconda will overwrite system's
 if [ -d "/usr/local/anaconda2" ]; then
-    export PYTHONHOME="/usr/local/anaconda2";
-    PATH="${PYTHONHOME}/bin:${PATH}"
+    export PYTHON_HOME="/usr/local/anaconda2";
+    PATH="${PYTHON_HOME}/bin:${PATH}"
 fi
 
 if [ -d "${HOME}/anaconda2" ]; then
-    export PYTHONHOME="${HOME}/anaconda2";
-    PATH="${PYTHONHOME}/bin:${PATH}"
+    export PYTHON_HOME="${HOME}/anaconda2";
+    PATH="${PYTHON_HOME}/bin:${PATH}"
 
 fi
 
 # Optional lib/include path
-if [ $PYTHONHOME ]; then
-    C_INCLUDE_PATH="${PYTHONHOME}/include/:$LD_LIBRARY_PATH"
-    LIBRARY_PATH="${PYTHONHOME}/lib/:$LD_LIBRARY_PATH"
-    LD_LIBRARY_PATH="${PYTHONHOME}/lib/:$LD_LIBRARY_PATH"
+if [ $PYTHON_HOME ]; then
+    C_INCLUDE_PATH="${PYTHON_HOME}/include/:$LD_LIBRARY_PATH"
+    LIBRARY_PATH="${PYTHON_HOME}/lib/:$LD_LIBRARY_PATH"
+    LD_LIBRARY_PATH="${PYTHON_HOME}/lib/:$LD_LIBRARY_PATH"
 fi
 
 #=============================================================================#
