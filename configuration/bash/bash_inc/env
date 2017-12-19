@@ -84,7 +84,6 @@ fi
 if [ -d "${HOME}/anaconda2" ]; then
     export PYTHON_HOME="${HOME}/anaconda2";
     PATH="${PYTHON_HOME}/bin:${PATH}"
-
 fi
 
 # Optional lib/include path

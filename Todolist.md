@@ -2,23 +2,23 @@
 
 ## 系统设置
 
-* “通用”：边栏图标小
+* "通用"：边栏图标小
 
-* “Dock”：大小最小，位于左边，最小化为应用图标
+* "Dock"：大小最小，位于左边，最小化为应用图标
 
-* “安全性与隐私”：允许任何来源应用，隐私-辅助功能-允许下面应用控制电脑
+* "安全性与隐私"：允许任何来源应用，隐私-辅助功能-允许下面应用控制电脑
 
-* “键盘”：将F1、F2等用作功能键
+* "键盘"：将F1、F2等用作功能键
 
-* “键盘”：配置物理键盘CMD与ALT互换。Capslock设置为无操作
+* "键盘"：配置物理键盘CMD与ALT互换。Capslock设置为无操作
 
-* “键盘”：启用“快捷键-所有控制”
+* "键盘"：启用"快捷键-所有控制"
 
 * "共享"：修改电脑名称
 
 * "用户与群组"：关闭Guest用户，修改开机启动项
 
-* “辅助功能”：“触控板选项”，启用拖移-三指拖移。
+* "辅助功能"："触控板选项"，启用拖移-三指拖移。
 
   ​
 
@@ -28,11 +28,11 @@
 
 - 安装替代终端：[iTerms2](http://www.iterm2.com)
 - 安装改键软件(系统10.11及以下)：[Seil](https://pqrs.org/osx/karabiner/seil.html.en)与[Karabiner](https://pqrs.org/osx/karabiner/)
-  - 在“系统设置-键盘-修饰键”中将Capslock设置为“无操作”
+  - 在"系统设置-键盘-修饰键"中将Capslock设置为"无操作"
   - 使用Seil将CapsLock的Keycode改为80
   - 替换Karabiner的[配置文件](https://github.com/htw0056/mac_configuration/blob/master/KarabinerConfiguration/private.xml)`private.xml`
 - 安装改键软件(系统10.12以上)：[Karabiner-Elements](https://pqrs.org/osx/karabiner/)
-  - 下载[caps_locl.json](https://github.com/htw0056/mac_configuration/blob/master/KarabinerConfiguration/caps_lock.json)
+  - 下载[caps_lock.json](https://github.com/htw0056/mac_configuration/blob/master/KarabinerConfiguration/caps_lock.json)
   - ` cp caps_lock.json .config/karabiner/assets/complex_modifications/caps_lock.json`
   - 如果有外接键盘，在Karabiner-Elements内设置外接键盘alt和command互换（目前Karabiner-Elements会覆盖系统默认配置）
 - 安装窗口管理软件：[Moom](https://manytricks.com/moom/)

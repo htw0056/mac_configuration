@@ -8,6 +8,7 @@
 #=============================================================================#
 # TOC                                                                         #
 #—————————————————————————————————————————————————————————————————————————————#
+# trash
 # cd
 # ls
 # vim
@@ -35,14 +36,14 @@ trash()
     for i in $*; do  
         STAMP=`date +%s`  
         fileName=`basename $i`  
-        mv $i $HOME/usr/trash/$fileName.$STAMP  
-        echo "move $i to ~/usr/trash/"
+        mv $i ${HOME}/usr/trash/$fileName.$STAMP  
+        echo "move $i to ${HOME}/usr/trash/"
     done
 }
 cleantrash()
 {
-    rm -rf ~/usr/trash/*
-    echo "clean ~/usr/trash/*"
+    rm -rf ${HOME}/usr/trash/*
+    echo "clean ${HOME}/usr/trash/*"
 }
 #=============================================================================#
 # cd                                                                          #
