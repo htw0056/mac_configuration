@@ -4,9 +4,15 @@ set fileencoding=utf-8
 syntax on
 set shiftwidth=4
 set tabstop=4
-set hlsearch
-set showmatch
-set nu
+set wildmenu "命令行模式智能补全
+set incsearch "搜索加强
+set hlsearch "搜索高亮
+set showmatch "自动匹配
+set nu "设置行号
+set autoindent "自动缩进
+set smartindent "智能缩进
+set cindent "C系列缩进
+set cursorline "高亮当前行
 "autocmd创建新文件自动调用setfilehead()函数
 autocmd BufNewFile *.sh exec ":call Setfilehead()"
 func Setfilehead()
