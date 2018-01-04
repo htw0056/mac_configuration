@@ -46,7 +46,7 @@
 
 ## 应用
 
-* 编辑器：[VSCode](https://code.visualstudio.com)，[Typora](https://www.typora.io), [Sublime](https://www.sublimetext.com/)
+* 编辑器：[VSCode](https://code.visualstudio.com)，[Typora](https://www.typora.io)， [Sublime](https://www.sublimetext.com/)
 * IM软件：[钉钉](https://www.dingtalk.com)
 * 浏览器：[Google Chrome](http://www.google.cn/intl/zh-CN/chrome/browser/desktop/index.html)
 * 解压软件：[Keka](http://www.kekaosx.com/en/)
@@ -56,9 +56,9 @@
 
 ## 开发环境
 
-* IDE：[IntelliJ IDEA Ultimate](http://www.jetbrains.com/idea/), [PyCharm](https://www.jetbrains.com/pycharm/download/#section=mac), [eclipse](http://www.eclipse.org/downloads/eclipse-packages/)
+* IDE：[IntelliJ IDEA Ultimate](http://www.jetbrains.com/idea/), [PyCharm](https://www.jetbrains.com/pycharm/download/#section=mac)
 
-* Anaconda安装至`~/anaconda`
+* Anaconda安装至`/usr/local/anaconda`
 
 * JDK安装至默认位置：[JDK Downloads](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
@@ -78,4 +78,5 @@
   ```
 
   ​
+
 
