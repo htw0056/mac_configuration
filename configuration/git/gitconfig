@@ -37,7 +37,8 @@
 	his=!git log --numstat --pretty=format:\"%Cred%an%Creset@%ar %Cgreen%s%Creset\" HEAD
 	last=log -1 -p HEAD
 	hd=log -2 HEAD
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit	ls=log --stat --summary --date=local
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit	
+	ls=log --stat --summary --date=local
 	ll=log -p --date=local
 	llw=log -p --date=local --word-diff
 	u=log --stat --summary --date=local --author
