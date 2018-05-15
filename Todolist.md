@@ -58,13 +58,13 @@
 
 * IDE：[IntelliJ IDEA Ultimate](http://www.jetbrains.com/idea/), [PyCharm](https://www.jetbrains.com/pycharm/download/#section=mac)
 
-* Anaconda安装至`/usr/local/anaconda`
+* [Anaconda](https://www.anaconda.com/download/#macos)安装至`/usr/local/anaconda`
 
-* JDK安装至默认位置：[JDK Downloads](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+* [JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)安装至默认位置
 
 * [Maven](https://maven.apache.org/)安装到`/usr/local/maven`
 
-* `Homebrew`： `https://brew.sh/`
+* [Homebrew](https://brew.sh/)
 
 * Git 安装
 

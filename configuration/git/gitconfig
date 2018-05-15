@@ -18,7 +18,6 @@
 	dih=diff HEAD
 	wc=whatchanged --oneline
 	ss=stash list
-	st=status
 	s=status -sb
 	br=branch
 	rb=branch -r
