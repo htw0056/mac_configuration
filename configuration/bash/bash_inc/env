@@ -28,7 +28,7 @@ export MANPAGER="less -X";
 #—————————————————————————————————————————————————————————————————————————————#
 shopt -s nocaseglob;    # case-insensitive globbing
 shopt -s histappend;    # append rather than overwrite in bash history
-shopt -s cdspell;       # auto-correct typos in cd
+#shopt -s cdspell;       # auto-correct typos in cd
 for option in autocd globstar; do
     shopt -s "$option" 2> /dev/null;
 done;                   # Bash 4 features
