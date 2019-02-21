@@ -1163,7 +1163,7 @@
                     }, 
                     "to": [
                         {
-                            "key_code": "9", 
+                            "key_code": "open_bracket", 
                             "modifiers": [
                                 "left_shift"
                             ]
@@ -1185,7 +1185,7 @@
                     }, 
                     "to": [
                         {
-                            "key_code": "0", 
+                            "key_code": "close_bracket", 
                             "modifiers": [
                                 "left_shift"
                             ]
