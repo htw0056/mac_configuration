@@ -5,9 +5,10 @@
   "maintainers": [
     "Vonng"
   ],
-  "author": "htw0056(htw0056@outlook.com)",
+  "author": "Vonng(rh@vonng.com)",
   "website": "http://capslock.vonng.com",
   "json_url": "https://vonng.com/capslock.json",
+  "import_url": "karabiner://karabiner/assets/complex_modifications/import?url=https://vonng.com/capslock.json",
   "gallery_url": "https://ke-complex-modifications.pqrs.org/#emulation-modes",
   "repo": "https://github.com/Vonng/Capslock",
   "rules": [
@@ -3486,6 +3487,27 @@
           "to": [
             {
               "shell_command": "open -a 'IntelliJ IDEA'"
+            }
+          ]
+        },
+        {
+          "description": "command + g = Intellij IDEA",
+          "type": "basic",
+          "from": {
+            "key_code": "g",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_shift",
+                "right_option",
+                "left_command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a 'Visual Studio Code'"
             }
           ]
         }
