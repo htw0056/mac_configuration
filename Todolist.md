@@ -27,10 +27,6 @@
 * 安装[搜狗输入法](http://pinyin.sogou.com/mac/)
 
 - 安装替代终端：[iTerms2](http://www.iterm2.com)
-- 安装改键软件(系统10.11及以下)：[Seil](https://pqrs.org/osx/karabiner/seil.html.en)与[Karabiner](https://pqrs.org/osx/karabiner/)
-  - 在"系统设置-键盘-修饰键"中将Capslock设置为"无操作"
-  - 使用Seil将CapsLock的Keycode改为80
-  - 替换Karabiner的[配置文件](https://github.com/htw0056/mac_configuration/blob/master/KarabinerConfiguration/private.xml)`private.xml`
 - 安装改键软件(系统10.12以上)：[Karabiner-Elements](https://pqrs.org/osx/karabiner/)
   - 下载[caps_lock.json](https://github.com/htw0056/mac_configuration/blob/master/KarabinerConfiguration/caps_lock.json)
   - ` cp caps_lock.json .config/karabiner/assets/complex_modifications/caps_lock.json`
